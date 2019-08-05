@@ -5,7 +5,7 @@ const assetPrefix = ASSET_HOST || ''
 
 module.exports = {
   assetPrefix,
-  target: 'serverless',
+  target: 'server',
   webpack: (config, { dev }) => {
     config.output.publicPath = `${assetPrefix}${config.output.publicPath}`
 
