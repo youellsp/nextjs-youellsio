@@ -45,6 +45,8 @@
   "scripts": {
     "lint-staged": "lint-staged",
     "build": "NODE_ENV=production next build",
+    "export": "next export",
+    "deploy": "yarn run build && yarn run export",
     "test:ci": "jest --maxWorkers=2 --ci",
     "test": "jest --watch",
     "start": "nodemon -w server server/index.js",
