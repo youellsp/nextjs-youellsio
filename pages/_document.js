@@ -2,7 +2,6 @@ import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import Helmet from 'react-helmet'
 
-// from https://github.com/zeit/next.js/edit/canary/examples/with-react-helmet/pages/_document.js
 export default class extends Document {
   static async getInitialProps (ctx) {
     const sheet = new ServerStyleSheet()
@@ -11,9 +10,9 @@ export default class extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
-        })
+        });
 
-      const documentProps = await Document.getInitialProps(ctx)
+      const documentProps = await Document.getInitialProps(ctx);
       return {
         ...documentProps,
         helmet: Helmet.renderStatic(),
@@ -44,7 +43,7 @@ export default class extends Document {
   }
 
   get helmetJsx () {
-    let title = 'Hello next.js Real World!'
+    const title = 'Patrick Youells Portfolio';
     return (
       <Helmet>
         <title>{title}</title>

@@ -17,6 +17,9 @@ export default class Layout extends PureComponent {
             </Link>
           </menu>
           <style jsx>{`
+            body {
+              background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+            }
             header {
               display: flex;
               align-items: center;

@@ -10,6 +10,16 @@ import theme from 'theme'
 
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
+  html {
+    height: 100%;
+  }
+  body {
+      height: 100%;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+ }
 `
 
 class MyApp extends App {
