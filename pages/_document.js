@@ -4,8 +4,8 @@ import Helmet from 'react-helmet'
 
 export default class extends Document {
   static async getInitialProps (ctx) {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
     try {
       ctx.renderPage = () =>
         originalRenderPage({

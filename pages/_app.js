@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
       background-attachment: fixed;
       background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
  }
-`
+`;
 
 class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {
@@ -30,8 +30,9 @@ class MyApp extends App {
         : {}
     }
   }
+
   render () {
-    const { Component, pageProps, store, router } = this.props
+    const { Component, pageProps, store, router } = this.props;
     return (
       <Container>
         <ThemeProvider theme={theme}>

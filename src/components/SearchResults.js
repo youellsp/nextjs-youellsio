@@ -7,7 +7,7 @@ const Container = styled.div`
   width: 300px;
   padding: 1em;
   margin: 1em auto;
-`
+`;
 const Item = styled.li`
   background: #eee;
   padding: 4px 12px;
@@ -17,9 +17,9 @@ const Item = styled.li`
     }
     background: ${props => props.theme.colors.primary};
   }
-`
+`;
 
-const REPO_COUNT = 10
+const REPO_COUNT = 10;
 const SearchResults = ({ repos }) => {
   return (
     <Container>
@@ -38,10 +38,10 @@ const SearchResults = ({ repos }) => {
       </ul>
     </Container>
   )
-}
+};
 
 SearchResults.propTypes = {
   repos: PropTypes.instanceOf(Map).isRequired
-}
+};
 
 export default SearchResults

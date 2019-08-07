@@ -4,7 +4,7 @@ import { render } from 'test-utils'
 import SearchResults from 'components/SearchResults'
 
 describe('Components::SearchResults', () => {
-  let props
+  let props;
   beforeEach(() => {
     props = {
       repos: Immutable.fromJS({
@@ -21,15 +21,15 @@ describe('Components::SearchResults', () => {
         }]
       })
     }
-  })
+  });
 
   const setup = () => {
-    const utils = render(<SearchResults {...props} />)
+    const utils = render(<SearchResults {...props} />);
     return utils
-  }
+  };
 
   it('renders all items', () => {
-    let utils = setup()
+    const utils = setup();
     props.repos.get('items').forEach((repo) => {
       expect(utils.getByText(repo.get('name'))).toHaveAttribute(
         'href',
@@ -37,4 +37,4 @@ describe('Components::SearchResults', () => {
       )
     })
   })
-})
+});

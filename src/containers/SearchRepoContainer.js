@@ -8,17 +8,17 @@ import SearchResults from 'components/SearchResults'
 
 class SearchRepoContainer extends Component {
   static async getInitialProps ({ store, query }) {
-    const lang = query.lang || 'javascript'
+    const lang = query.lang || 'javascript';
     await store.dispatch(getTopRepos({ lang }))
   }
 
   componentDidMount () {
-    const { getTopRepos } = this.props
+    const { getTopRepos } = this.props;
     getTopRepos({ lang: 'ruby' })
   }
 
   render () {
-    const { repos } = this.props
+    const { repos } = this.props;
     return (
       <Fragment>
         <div onClick={this._goToAbout}>
@@ -43,7 +43,7 @@ function mapStateToProps (state) {
 SearchRepoContainer.propTypes = {
   repos: PropTypes.instanceOf(Map).isRequired,
   getTopRepos: PropTypes.func.isRequired
-}
+};
 
 export { SearchRepoContainer }
 export default connect(mapStateToProps, {
